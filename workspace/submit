@@ -1,2 +1,2 @@
 #!/bin/sh
-julia --color=yes -e 'using RedPen,Obfuscatee; @binclude "../src/.sbin"' "$@"
+bash -i -c 'julia --color=yes -e "using RedPen,Obfuscatee; @binclude \"../src/.sbin\"" "$@"' bash "$@"

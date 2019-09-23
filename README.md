@@ -33,6 +33,9 @@ If you already have Julia v1.2 and Git, **skip to step #3** under "Installation"
 3. **Download and run `aa228download.jl`**:
    - Right-click and "Save link as..." `aa228download.jl` in your desired location:
      - [aa228download.jl](https://github.com/sisl/AA228Student.jl/raw/master/aa228download.jl)
+     - Or you can use `curl`:
+
+           curl https://raw.githubusercontent.com/sisl/AA228Student.jl/master/aa228download.jl -o aa228download.jl
    - Open a terminal and `cd` to the location of `aa228download.jl`
      - Run the following (from the command line, `--color` is optional):
 
