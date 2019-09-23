@@ -66,6 +66,17 @@ To submit your project file(s), you'll do all of it via the command line (using 
       > - Replace **<YOUR_EMAIL>** below with your **SUNetID**@stanford.edu email address.
       > - You can also provide an *optional nickname* to appear on the leaderboard, but it'll default to your SUNet ID if nothing is provided (replace **\<NICKNAME\>** with your desired nickname).
 
+# Status
+You can request the status of your submissions via:
+
+    submit status <YOUR_EMAIL>
+
+And you'll receive a message similar to this:
+
+    ┌ Info: Submission successful!
+    │ Status of submissions (<YOUR_EMAIL>@stanford.edu):
+    └       Project 0: Submitted ✓
+
 # Updating
 By default, running the `submit` script will update the required packages automatically. If an update needs to be pushed out to `AA228Student` *before a submission*, you can do either of the following (we will instruct you to do so):
 - `cd` to the `AA228Student` directory and run `git pull`
