@@ -34,10 +34,10 @@ If you already have Julia v1.2 and Git, **skip to step #3** under "Installation"
    - Right-click and "Save link as..." `aa228download.jl` in your desired location:
      - [aa228download.jl](https://github.com/sisl/AA228Student.jl/raw/master/aa228download.jl)
    - Open a terminal and `cd` to the location of `aa228download.jl`
-     - Run the following (from the command line):
+     - Run the following (from the command line, `--color` is optional):
 
-           julia aa228download.jl
-       - This will download the necessary Julia packages and will clone this repository into the directory `AA228Student`
+           julia --color=yes aa228download.jl
+     - This will download the necessary Julia packages and will clone this repository into the directory `AA228Student`
 
 # Submitting
 To submit your project file(s), you'll do all of it via the command line (using the terminal of your choice):
