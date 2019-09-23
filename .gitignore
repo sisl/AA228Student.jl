@@ -22,7 +22,7 @@
 
 # Project 1 starter code, data, and submit executables
 !workspace/
-!workspace/submit.*
+!workspace/submit*
 !workspace/project1/
 !workspace/project1/project1.jl
 !workspace/project1/project1.py

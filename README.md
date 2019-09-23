@@ -6,7 +6,7 @@
 
 This repository is used to submit project files for [AA228/CS238: Decision Making under Uncertainty](https://aa228.stanford.edu) taught by [Mykel Kochenderfer](https://mykel.kochenderfer.com) at Stanford University.
 
-The repository includes `submit.bat` (_Windows_) and `submit.sh` (_Linux/Mac OS X_) command line tools to submit project files located in the `workspace` directory.
+The repository includes the `submit` command line tool to submit project files located in the `workspace` directory.
 
 All data and starter code for the projects are included in the `workspace` directory. **Project submissions will occur within the `workspace` directory.**
 
@@ -57,9 +57,9 @@ To submit your project file(s), you'll do all of it via the command line (using 
 
            submit project2 <YOUR_EMAIL> <NICKNAME>
 
-    - **Linux/Mac OS X examples (using `submit.sh`):** Use the same arguments as the Windows examples, but use `./submit.sh` to run the submit script:
+    - **Linux/Mac OS X examples (using `submit`):** Use the same arguments as the Windows examples, but use `./submit` to run the submit script:
 
-          ./submit.sh project0.txt <YOUR_EMAIL>
+          ./submit project0.txt <YOUR_EMAIL>
       > - Replace **<YOUR_EMAIL>** below with your **SUNetID**@stanford.edu email address.
       > - You can also provide an *optional nickname* to appear on the leaderboard, but it'll default to your SUNet ID if nothing is provided (replace **\<NICKNAME\>** with your desired nickname).
 
