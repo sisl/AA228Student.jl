@@ -10,9 +10,9 @@ The repository includes `submit.bat` (_Windows_) and `submit.sh` (_Linux/Mac OS 
 
 All data and starter code for the projects are included in the `workspace` directory. **Project submissions will occur within the `workspace` directory.**
 
-> **Requirements:** Julia v1.2 and git.
+> **Requirements:** Julia v1.2 and Git.
 
-If you already have Julia v1.2 and git, **skip to step #3** under "Installation".*
+If you already have Julia v1.2 and Git, **skip to step #3** under "Installation".*
 
 
 ## Installation
