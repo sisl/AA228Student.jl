@@ -6,10 +6,10 @@ using Pkg
 @info "Downloading RedPen and AA228Student (requires git)..."
 
 # Download Obfuscatee as a package
-Pkg.add(PackageSpec(url="https://gitlab.com/sisl/Obfuscatee.jl.git"))
+Pkg.add(PackageSpec(url="https://github.com/sisl/Obfuscatee.jl.git"))
 
 # Download RedPen as a package
-Pkg.add(PackageSpec(url="https://gitlab.com/sisl/RedPen.jl.git"))
+Pkg.add(PackageSpec(url="https://github.com/sisl/RedPen.jl.git"))
 
 # Download/update AA228Student repository
 if basename(pwd()) == "AA228Student"
@@ -24,7 +24,7 @@ elseif isdir("AA228Student")
 else
     # Download AA228Student as a local repo, then add it as a package
     # Clone repo if it doesn't exist
-    run(`git clone https://gitlab.com/sisl/AA228Student.jl.git AA228Student`)
+    run(`git clone https://github.com/sisl/AA228Student.jl.git AA228Student`)
     aa228path = joinpath(pwd(), "AA228Student")
 end
 
