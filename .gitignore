@@ -24,6 +24,7 @@
 !workspace/
 !workspace/submit*
 !workspace/project1/
+!workspace/project1/.gitkeep
 !workspace/project1/project1.jl
 !workspace/project1/project1.py
 !workspace/project1/example.gph
@@ -31,3 +32,7 @@
 !workspace/project1/large.csv
 !workspace/project1/medium.csv
 !workspace/project1/small.csv
+
+# Project 2
+!workspace/project2/
+!workspace/project2/.gitkeep
