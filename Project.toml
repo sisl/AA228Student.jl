@@ -1,0 +1,13 @@
+name = "AA228Student"
+uuid = "086969c3-7975-5349-805c-3f2586896fd3"
+authors = ["Robert Moss <mossr@stanford.edu>"]
+version = "0.1.0"
+
+[deps]
+RedPen = "6500d021-ed42-4427-8819-7be88027218e"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+BayesNets = "ba4760a4-c768-5bed-964b-cf806dc591cb"
+LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+Obfuscatee = "4b331413-18b5-5698-88d1-0abf3b5dfc34"
