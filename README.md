@@ -75,7 +75,7 @@ And you'll receive a message similar to this:
 
     ┌ Info: Submission successful!
     │ Status of submissions (<YOUR_EMAIL>@stanford.edu):
-    └       Project 0: Submitted ✓
+    └       Project 0: Submitted!
 
 # Updating
 By default, running the `submit` script will update the required packages automatically. If an update needs to be pushed out to `AA228Student` *before a submission*, you can do either of the following (we will instruct you to do so):
