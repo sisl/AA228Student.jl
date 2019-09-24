@@ -31,16 +31,20 @@ If you already have Julia v1.2 and Git, **skip to step #3** under "Installation"
 
 2. **Install Git** from https://git-scm.com/downloads
 3. **Download and run `aa228download.jl`**:
-   - Right-click and "Save link as..." `aa228download.jl` in your desired location:
-     - [aa228download.jl](https://github.com/sisl/AA228Student.jl/raw/master/aa228download.jl)
-     - ***Or*** you can use `curl`:
+   1. Right-click and "Save link as..." `aa228download.jl` in your desired location:
+      - [aa228download.jl](https://github.com/sisl/AA228Student.jl/raw/master/aa228download.jl)
+      - ***Or*** you can use `curl`:
 
-           curl https://raw.githubusercontent.com/sisl/AA228Student.jl/master/aa228download.jl -o aa228download.jl
-   - Open a terminal and `cd` to the location of `aa228download.jl`
-     - Run the following (from the command line, `--color` is optional):
+            curl https://raw.githubusercontent.com/sisl/AA228Student.jl/master/aa228download.jl -o aa228download.jl
+      - ***Or*** you can run this monstrosity of a one-liner (if you do, *skip the next step ii*):
 
-           julia --color=yes aa228download.jl
-     - This will download the necessary Julia packages and will clone this repository into the directory `AA228Student`
+            julia --color=yes -e "using Pkg;@info \"Downloading RedPen and AA228Student (requires git)...\";Pkg.add(PackageSpec(url=\"https://github.com/sisl/Obfuscatee.jl.git\"));Pkg.add(PackageSpec(url=\"https://github.com/sisl/RedPen.jl.git\"));gitpull() = run(Cmd([\"git\", \"pull\", \"--rebase\"]));if basename(pwd()) == \"AA228Student\";gitpull();aa228path = pwd();elseif isdir(\"AA228Student\");cd(\"AA228Student\") do;gitpull();end;aa228path = joinpath(pwd(), \"AA228Student\");else;run(Cmd([\"git\", \"clone\", \"https://github.com/sisl/AA228Student.jl.git\", \"AA228Student\"]));aa228path = joinpath(pwd(), \"AA228Student\");end;@info string(\"Using AA228Student repository from: \", aa228path);Pkg.add(PackageSpec(path=aa228path));@info \"Precompiling AA228Student...\";using AA228Student ;@info(string(\"Please submit projects from the following directory:\n\", joinpath(aa228path, \"workspace\")))"
+        - This works on *Windows/Linux/Mac OS X*: it will download the `AA228Student` repo and it's dependencies.
+   2. Open a terminal and `cd` to the location of `aa228download.jl`
+      - Run the following (from the command line, `--color=yes` argument is optional):
+
+            julia --color=yes aa228download.jl
+        - This will download the necessary Julia packages and will clone this repository into the directory `AA228Student`
 
 # Submitting
 To submit your project file(s), you'll do all of it via the command line (using the terminal of your choice):
