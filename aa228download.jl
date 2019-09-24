@@ -1,6 +1,7 @@
 # Download AA228Student and RedPen repositories
 # Robert Moss | mossr@stanford.edu | Sep. 2019
 using Pkg
+using LibGit2
 
 @info "Downloading RedPen and AA228Student (requires git)..."
 
@@ -10,22 +11,25 @@ Pkg.add(PackageSpec(url="https://github.com/sisl/Obfuscatee.jl.git"))
 # Download RedPen as a package
 Pkg.add(PackageSpec(url="https://github.com/sisl/RedPen.jl.git"))
 
-gitpull() = run(`git pull --rebase`)
+function gitpull(repo::GitRepo)
+    LibGit2.fetch(repo)
+    LibGit2.merge!(repo)
+end
 
 # Download/update AA228Student repository
 if basename(pwd()) == "AA228Student"
-    gitpull()
     aa228path = pwd()
+    repo = GitRepo(aa228path)
+    gitpull(repo)
 elseif isdir("AA228Student")
     # Update repo if it exists
-    cd("AA228Student") do
-        gitpull()
-    end
     aa228path = joinpath(pwd(), "AA228Student")
+    repo = GitRepo(aa228path)
+    gitpull(repo)
 else
     # Download AA228Student as a local repo, then add it as a package
     # Clone repo if it doesn't exist
-    run(`git clone https://github.com/sisl/AA228Student.jl.git AA228Student`)
+    LibGit2.clone("https://github.com/sisl/AA228Student.jl.git", "AA228Student")
     aa228path = joinpath(pwd(), "AA228Student")
 end
 
