@@ -1,5 +1,9 @@
 # Download AA228Student and RedPen repositories
 # Robert Moss | mossr@stanford.edu | Sep. 2019
+if VERSION < v"1.2"
+    error("Julia v1.2 is required. Your current version is v$VERSION")
+end
+
 using Pkg
 using LibGit2
 
@@ -38,6 +42,6 @@ end
 Pkg.add(PackageSpec(path=aa228path))
 
 @info "Precompiling AA228Student..."
+Pkg.build()
 using AA228Student # Precompiles packages
-
 @info string("Please submit projects from the following directory:\n", joinpath(aa228path, "workspace"))
