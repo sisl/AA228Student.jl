@@ -16,7 +16,7 @@ If you already have Julia v1.2 and Git, **skip to step #3** under "Installation"
 
 
 ## Installation
-1. **Install Julia v1.2** from https://julialang.org/downloads/ (follow their installation steps)
+1. **Install the 64-bit version of Julia v1.2** from https://julialang.org/downloads/ (follow their installation steps)
    - **Add `julia` to the command line path:** This will make `julia` available anywhere on the command line.
      - **Windows**:  Follow [these instructions](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/) and add the Julia `bin` directory to your User PATH environment variable (replacing **<PATH_TO_JULIA>** with your actual Julia installation location).
 
