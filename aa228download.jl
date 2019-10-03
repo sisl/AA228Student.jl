@@ -1,7 +1,11 @@
 # Download AA228Student and RedPen repositories
 # Robert Moss | mossr@stanford.edu | Sep. 2019
 if VERSION < v"1.2"
-    error("Julia v1.2 is required. Your current version is v$VERSION")
+    error("Julia v1.2 is required. Your current version is v", VERSION)
+end
+
+if Int <: Int32
+    error("64-bit version of Julia is required, please redownload the 64-bit version.")
 end
 
 using Pkg
