@@ -1,4 +1,4 @@
-# Download AA228Student and RedPen repositories
+# Download/update AA228Student and RedPen repositories
 # Robert Moss | mossr@stanford.edu | Sep. 2019
 if VERSION < v"1.2"
     error("Julia v1.2 is required. Your current version is v", VERSION)
@@ -11,7 +11,7 @@ end
 using Pkg
 using LibGit2
 
-@info "Downloading RedPen and AA228Student (requires git)..."
+@info "Updating RedPen and AA228Student (requires git)..."
 
 # Download Obfuscatee as a package
 Pkg.add(PackageSpec(url="https://github.com/sisl/Obfuscatee.jl.git"))
@@ -24,16 +24,23 @@ function gitpull(repo::GitRepo)
     LibGit2.merge!(repo)
 end
 
+# Resolve FETCH_HEAD issues by clearing it out
+clearhead(path::String) = rm(joinpath(path, ".git", "FETCH_HEAD"))
+
+function update(path::String)
+    clearhead(aa228path)
+    repo = GitRepo(aa228path)
+    gitpull(repo)
+end
+
 # Download/update AA228Student repository
 if basename(pwd()) == "AA228Student"
     aa228path = pwd()
-    repo = GitRepo(aa228path)
-    gitpull(repo)
+    update(aa228path)
 elseif isdir("AA228Student")
     # Update repo if it exists
     aa228path = joinpath(pwd(), "AA228Student")
-    repo = GitRepo(aa228path)
-    gitpull(repo)
+    update(aa228path)
 else
     # Download AA228Student as a local repo, then add it as a package
     # Clone repo if it doesn't exist
@@ -46,6 +53,7 @@ end
 Pkg.add(PackageSpec(path=aa228path))
 
 @info "Precompiling AA228Student..."
+Pkg.update()
 Pkg.build()
 using AA228Student # Precompiles packages
 @info string("Please submit projects from the following directory:\n", joinpath(aa228path, "workspace"))

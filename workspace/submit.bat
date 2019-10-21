@@ -1,2 +1,2 @@
 @ECHO OFF
-julia --color=yes -e "using RedPen,Obfuscatee; @binclude \"../src/.sbin\"" %*
+julia --color=yes -p auto -e "using RedPen,Obfuscatee; @binclude \"../src/.sbin\"" %*
