@@ -25,7 +25,7 @@ function gitpull(repo::GitRepo)
 end
 
 # Resolve FETCH_HEAD issues by clearing it out
-clearhead(path::String) = rm(joinpath(path, ".git", "FETCH_HEAD"))
+clearhead(path::String) = rm(joinpath(path, ".git", "FETCH_HEAD"), force=true)
 
 function update(path::String)
     clearhead(aa228path)
