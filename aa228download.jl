@@ -8,6 +8,16 @@ if Int <: Int32
     error("64-bit version of Julia is required, please redownload the 64-bit version.")
 end
 
+if Sys.iswindows()
+    try
+        # Check if in elevated mode (required to build ZMQ)
+        run(pipeline(Cmd(["net", "session"]), stdout=Pipe(), stderr=Pipe()))
+    catch err
+        @warn("A package dependency on Windows requires Administrator privileges, please restart your terminal and 'Run as administrator'.\nYou only need to do this to run aa228download.jl")
+        exit(-1)
+    end
+end
+
 using Pkg
 using LibGit2
 
