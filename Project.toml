@@ -1,7 +1,7 @@
 name = "AA228Student"
 uuid = "086969c3-7975-5349-805c-3f2586896fd3"
 authors = ["Robert Moss <mossr@stanford.edu>"]
-version = "0.2.3"
+version = "0.2.4"
 
 [deps]
 BayesNets = "ba4760a4-c768-5bed-964b-cf806dc591cb"
