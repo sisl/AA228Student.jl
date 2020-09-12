@@ -1,10 +1,10 @@
-
-
-
-
 # RedPen: AA228Student
 
-This repository is used to submit project files for [AA228/CS238: Decision Making under Uncertainty](https://aa228.stanford.edu) taught by [Mykel Kochenderfer](https://mykel.kochenderfer.com) at Stanford University.
+[![Deprecated](https://img.shields.io/badge/autumn%202019-deprecated-orange)](https://github.com/sisl/AA228-CS238-Student)
+
+**Note: for Autumn 2020, see https://github.com/sisl/AA228-CS238-Student**
+
+This repository is used to submit project files for [AA228/CS238: Decision Making under Uncertainty](https://aa228.stanford.edu) taught by [Mykel Kochenderfer](https://mykel.kochenderfer.com) at Stanford University, Autumn 2019.
 
 The repository includes the `submit` command line tool to submit project files located in the `workspace` directory.
 
