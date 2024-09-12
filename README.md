@@ -1,6 +1,7 @@
-# RedPen: AA228Student
+# ~~RedPen: AA228Student~~
 
 [![Deprecated](https://img.shields.io/badge/autumn%202019-deprecated-orange)](https://github.com/sisl/AA228-CS238-Student)
+## THIS REPOSITORY IS NO LONGER MAINTAINED. PLEASE reference https://github.com/sisl/AA228-CS238-Student.
 
 **Note: for Autumn 2020, see https://github.com/sisl/AA228-CS238-Student**
 
